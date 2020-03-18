@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./vue_js.css">
+    <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>vue.jsタスク</title>
+  </head>
+  <body>
+    <div class="form_container">
+      <form class="registration_form" action="vue_js.html" method="post">
+        <div class="filling_area">
+          <div class="form-component">
+            <label for="name">名前：</label>
+            <input type="text" id="name"  value="">
+          </div>
+          <div class="form-component">
+            <label for="course">コース：</label>
+            <input type="text" id="course"  value="">
+          </div>
+          <div class="form-component">
+            <label for="season">受講期：</label>
+            <input type="text" id="season"  value="">
+          </div>
+        </div>
+        <input type="button" id="submit" value="登録">
+      </form>
+    </div>
+
+    <div id="student_list_area">
+      <ol>
+        <student-list
+          v-for="student in studentList"
+          v-bind:student="student"
+          v-bind:key="student.id"
+          ></student-list>
+
+      </ol>
+    </div>
+
+    <script src="main.js">
+    </script>
+  </body>
+</html>
