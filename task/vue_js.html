@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="form_container">
-      <form id="registration_form" action="vue_js.html" method="post">
+      <form id="registration_form" name='registration_form' action="vue_js.html" method="post">
         <div class="filling_area">
           <div class="form-component">
             <label for="name">名前：</label>
@@ -28,7 +28,7 @@
     </div>
 
     <div id="push">
-      <button v-on:click="addStudetList">Add student</button>
+      <button v-on:click="addStudetList">入力した生徒を追加する</button>
     </div>
     <div id="student_list_area">
       <ul>

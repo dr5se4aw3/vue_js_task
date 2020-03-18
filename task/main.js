@@ -33,7 +33,7 @@ var sampleButton = new Vue({
   el: '#push',
   data: {
     lastStudentId: 0,
-    studentId: 0
+    studentId: 1
   },
   methods: {
     addStudetList: function (event){
@@ -44,6 +44,7 @@ var sampleButton = new Vue({
           this.studentId = students.list[students.list.length-1].id + 1
         }
         students.list.push({id: this.studentId, name: student.name, course: student.course, season: student.season})
+        document.registration_form.reset();
       }
     }
   }
