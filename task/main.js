@@ -1,6 +1,6 @@
 Vue.component('student-list',{
   props: ['student'],
-  template: '<li>{{ student.name }}</li>'
+  template: '<li>ID：{{student.id}}／名前：{{ student.name }}</li>'
 })
 
 var sample = new Vue({

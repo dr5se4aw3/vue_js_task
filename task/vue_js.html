@@ -29,14 +29,14 @@
     </div>
 
     <div id="student_list_area">
-      <ol>
+      <ul>
         <student-list
           v-for="student in studentList"
           v-bind:student="student"
           v-bind:key="student.id"
           ></student-list>
 
-      </ol>
+      </ul>
     </div>
 
     <script src="main.js">
