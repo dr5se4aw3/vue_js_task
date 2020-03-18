@@ -24,21 +24,20 @@
             <input type="text" id="season" v-model="season" value="">
           </div>
         </div>
-        <input type="button" id="submit" value="登録">
       </form>
     </div>
 
+    <div id="push">
+      <button v-on:click="addStudetList">Add student</button>
+    </div>
     <div id="student_list_area">
       <ul>
         <student-list
-          v-for="student in studentList"
+          v-for="student in list"
           v-bind:student="student"
           v-bind:key="student.id"
           ></student-list>
       </ul>
-    </div>
-    <div id="push">
-      <button v-on:click="addStudetList">Add student</button>
     </div>
 
     <script src="main.js">
