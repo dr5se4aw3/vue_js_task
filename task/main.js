@@ -13,9 +13,24 @@ var sampleList = new Vue({
     ]
   }
 })
+
+var studentProperty = new Vue({
+  el: '#registration_form',
+  data: {
+    name: '',
+    course: '',
+    season: ''
+  }
+})
+
 var sampleButton = new Vue({
   el: '#push',
   data: {
     counter: 0
+  },
+  methods: {
+    addStudetList: function (event){
+      sampleList.studentList.push({id:3, name: studentProperty.name})
+    }
   }
 })

@@ -9,19 +9,19 @@
   </head>
   <body>
     <div class="form_container">
-      <form class="registration_form" action="vue_js.html" method="post">
+      <form id="registration_form" action="vue_js.html" method="post">
         <div class="filling_area">
           <div class="form-component">
             <label for="name">名前：</label>
-            <input type="text" id="name"  value="">
+            <input type="text" id="name" v-model="name" value="">
           </div>
           <div class="form-component">
             <label for="course">コース：</label>
-            <input type="text" id="course"  value="">
+            <input type="text" id="course" v-model="course" value="">
           </div>
           <div class="form-component">
             <label for="season">受講期：</label>
-            <input type="text" id="season"  value="">
+            <input type="text" id="season" v-model="season" value="">
           </div>
         </div>
         <input type="button" id="submit" value="登録">
@@ -38,8 +38,7 @@
       </ul>
     </div>
     <div id="push">
-      <button v-on:click="counter += 1">Add 1</button>
-      <p>ボタンは{{counter}}回押されています。</p>
+      <button v-on:click="addStudetList">Add student</button>
     </div>
 
     <script src="main.js">
