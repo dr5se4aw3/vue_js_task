@@ -35,8 +35,11 @@
           v-bind:student="student"
           v-bind:key="student.id"
           ></student-list>
-
       </ul>
+    </div>
+    <div id="push">
+      <button v-on:click="counter += 1">Add 1</button>
+      <p>ボタンは{{counter}}回押されています。</p>
     </div>
 
     <script src="main.js">
